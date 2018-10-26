@@ -1,0 +1,20 @@
+<?php
+$this->headTitle('Consumer');
+$form = $this->form;
+?>
+
+<div class="row">
+    <div class="col-md-offset-4 col-md-3">
+		<?= $this->form()->openTag($form); ?>
+            <h2 class="form-signin-heading">Login to admin panel</h2>
+            <?php if ($this->error) : ?>
+                <div class="alert alert-warning" role="alert">
+                    <?= $this->error; ?>
+                </div>
+            <?php endif ; ?>
+            <?= $this->formElement($form->get('login')); ?>
+            <?= $this->formElement($form->get('password')); ?>
+            <?= $this->formElement($form->get('submit')); ?>
+        <?= $this->form()->closeTag(); ?>
+    </div>
+</div>
